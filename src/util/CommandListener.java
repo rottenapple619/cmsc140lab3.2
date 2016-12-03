@@ -337,7 +337,7 @@ public class CommandListener extends Thread{
         }
             
         Log.print("------------------------------------------------------------");
-        Log.print("Publishing a file to the P2P Network: "+peer.getInitiator().getID()+"@"+peer.getInitiator().getPort());
+        Log.print("Publishing a file to the P2P Network: "+HashFunction.displayID(peer.getInitiator().getID())+"@"+peer.getInitiator().getPort());
         Log.print("FileID: "+HashFunction.displayID(fileObj.getID()));
         Log.print("Filename: "+fileObj.getFile().getName());
         Log.print("------------------------------------------------------------");
@@ -350,7 +350,7 @@ public class CommandListener extends Thread{
     
     private void delete(FileRef fRef, PeerConnection peer) {
         Log.print("------------------------------------------------------------");
-        Log.print("Deleting a file to the P2P Network: "+peer.getInitiator().getID()+"@"+peer.getInitiator().getPort());
+        Log.print("Deleting a file to the P2P Network: "+HashFunction.displayID(peer.getInitiator().getID())+"@"+peer.getInitiator().getPort());
         Log.print("FileID: "+HashFunction.displayID(fRef.getID()));
         Log.print("Filename: "+fRef.getFileName());
         Log.print("------------------------------------------------------------");
@@ -366,7 +366,7 @@ public class CommandListener extends Thread{
 
     private void retrieve(FileRef fRef, PeerConnection peer) {
         Log.print("------------------------------------------------------------");
-        Log.print("Retrieving a file to the P2P Network: "+peer.getInitiator().getID()+"@"+peer.getInitiator().getPort());
+        Log.print("Retrieving a file to the P2P Network: "+HashFunction.displayID(peer.getInitiator().getID())+"@"+peer.getInitiator().getPort());
         Log.print("FileID: "+HashFunction.displayID(fRef.getID()));
         Log.print("Filename: "+fRef.getFileName());
         Log.print("------------------------------------------------------------");
