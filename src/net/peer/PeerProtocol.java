@@ -263,11 +263,11 @@ class PeerProtocol {
 
     
     /**
-     * tests whether newEntry immediately precedes comparator
+     * tests whether newEntry supersedes successorOfComparator
      * @param newEntry
      * @param comparator
      * @param successorOfComparator the current successor of comparator
-     * @return true if newEntry immediately precedes comparator
+     * @return true if newEntry superseded successorOfComparator
      */
     private static boolean isSuccessor(Long newEntry, Long comparator, Long successorOfComparator) {
         return ((newEntry > comparator && newEntry <= successorOfComparator)
